@@ -1,0 +1,16 @@
+# DAX Formulas for Power BI Implementation
+
+If you want to replicate this logic in Power BI Desktop, use the following Calculated Columns:
+
+1. High Transaction Flag (h_Transact):
+   h_Transact = IF([Amount] > 4000, "High", "Normal")
+
+2. Unusual Time Flag (unusual_Ti):
+   unusual_Ti = IF(OR(HOUR([Time]) >= 0, HOUR([Time]) <= 6), "Unusual", "Normal")
+
+3. Fraud Status Label (Fraud_Label):
+   Fraud_Label = IF([Is_Fraud] = 1, "Fraud", "Non-Fraud")
+
+# Power Query Transformations (M Code snippets)
+- For the Hour extraction:
+  Each Time.Hour([Time])
