@@ -38,7 +38,7 @@ print("PANDAS MINI PROJECT: CREDIT CARD FRAUD DETECTION")
 print("*" * 50)
 
 # ---------------------------------------------------------
-# 🔹 1. Data Loading
+#  1. Data Loading
 # Reading data from files like CSV, Excel, SQL
 # ---------------------------------------------------------
 print("\n[1] DATA LOADING")
@@ -54,7 +54,7 @@ conn.close()
 print("Data loaded successfully from SQL Database into a DataFrame.")
 
 # ---------------------------------------------------------
-# 🔹 2. Data Inspection
+#  2. Data Inspection
 # Understanding the dataset structure
 # ---------------------------------------------------------
 print("\n[2] DATA INSPECTION")
@@ -71,7 +71,7 @@ print("\n--> df.describe(): Statistical summary of numerical columns")
 print(df.describe())
 
 # ---------------------------------------------------------
-# 🔹 3. Data Cleaning
+#  3. Data Cleaning
 # Handling missing or incorrect data
 # ---------------------------------------------------------
 print("\n[3] DATA CLEANING")
@@ -88,7 +88,7 @@ df = df.dropna(how='all')
 print("Missing values filled and null rows dropped (if any).")
 
 # ---------------------------------------------------------
-# 🔹 4. Data Selection & Filtering
+#  4. Data Selection & Filtering
 # Selecting specific rows/columns
 # ---------------------------------------------------------
 print("\n[4] DATA SELECTION & FILTERING")
@@ -100,7 +100,7 @@ high_value_df = df[df['Amount'] > 9000]
 print(f"Found {len(high_value_df)} high-value transactions.")
 
 # ---------------------------------------------------------
-# 🔹 5. Data Manipulation
+#  5. Data Manipulation
 # Modifying data, sorting, etc.
 # ---------------------------------------------------------
 print("\n[5] DATA MANIPULATION")
@@ -113,7 +113,7 @@ print("Data sorted by Amount (Descending). First 3 rows after sort:")
 print(df[['Location', 'Amount']].head(3))
 
 # ---------------------------------------------------------
-# 🔹 6. Grouping & Aggregation
+#  6. Grouping & Aggregation
 # Grouping data for analysis
 # ---------------------------------------------------------
 print("\n[6] GROUPING & AGGREGATION")
@@ -122,7 +122,7 @@ avg_amount_by_loc = df.groupby('Location')['Amount'].mean().round(2)
 print(avg_amount_by_loc)
 
 # ---------------------------------------------------------
-# 🔹 7. Merging & Joining
+#  7. Merging & Joining
 # Combining multiple datasets
 # ---------------------------------------------------------
 print("\n[7] MERGING & JOINING")
@@ -139,7 +139,7 @@ print(f"Merged DataFrame shape: {df.shape}")
 print(df[['Location', 'City_Tier']].head(3))
 
 # ---------------------------------------------------------
-# 🔹 8. Data Transformation
+#  8. Data Transformation
 # Changing data format
 # ---------------------------------------------------------
 print("\n[8] DATA TRANSFORMATION")
@@ -156,7 +156,7 @@ print("Applied transformations (apply, map, astype).")
 print(df[['Amount', 'is_high_amount', 'Is_Fraud', 'Fraud_Status_Text', 'Is_Fraud_Float']].head(3))
 
 # ---------------------------------------------------------
-# 🔹 9. Data Visualization
+#  9. Data Visualization
 # Creating charts and graphs
 # ---------------------------------------------------------
 print("\n[9] DATA VISUALIZATION")
@@ -170,7 +170,7 @@ plt.close()
 print("Saved visualization to 'pandas_amount_vs_fraud.png'.")
 
 # ---------------------------------------------------------
-# 🔹 10. Exporting Data
+# 10. Exporting Data
 # Saving processed data
 # ---------------------------------------------------------
 print("\n[10] EXPORTING DATA")
